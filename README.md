@@ -104,27 +104,4 @@ npm install
 npm run dev                   # http://localhost:5173
 ```
 
-Acesso inicial: `admin@financas.local` / `Admin@12345` (definidos no `.env`). Troque a senha depois do primeiro login.
-
-Se for usar um PostgreSQL próprio em vez do Docker, ajuste `DATABASE_URL` no `backend/.env`.
-
-## Principais endpoints
-
-| Método | Rota | Descrição |
-|---|---|---|
-| POST | `/api/auth/login` | Autenticação |
-| GET | `/api/reports/dashboard` | Dados do dashboard |
-| GET/POST | `/api/payables`, `/api/receivables` | Listar / criar títulos (com parcelas) |
-| POST | `/api/{payables\|receivables}/:id/pay` | Baixa total ou parcial |
-| POST | `/api/{payables\|receivables}/:id/cancel` | Cancelamento com estorno |
-| DELETE | `/api/{payables\|receivables}/payments/:id` | Estorno de baixa |
-| GET | `/api/reports/dre?start&end&cost_center_id` | DRE |
-| GET | `/api/reports/dre-monthly?year` | DRE comparativa mensal |
-| GET | `/api/reports/balance-sheet?as_of` | Balanço patrimonial |
-| GET | `/api/reports/cash-flow?start&end` | DFC realizada |
-| GET | `/api/reports/cash-projection?days` | Fluxo projetado |
-| GET | `/api/reports/indicators?start&end` | Indicadores financeiros |
-| CRUD | `/api/accounts`, `/api/partners`, `/api/cost-centers`, `/api/bank-accounts`, `/api/budgets` | Cadastros |
-| POST | `/api/bank-transactions`, `/api/transfers`, `/api/journal` | Movimentos, transferências e lançamentos |
-| — | `/api/admin/users`, `/api/admin/audit`, `/api/admin/settings` | Administração |
 
