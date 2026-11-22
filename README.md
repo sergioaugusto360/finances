@@ -128,10 +128,3 @@ Se for usar um PostgreSQL próprio em vez do Docker, ajuste `DATABASE_URL` no `b
 | POST | `/api/bank-transactions`, `/api/transfers`, `/api/journal` | Movimentos, transferências e lançamentos |
 | — | `/api/admin/users`, `/api/admin/audit`, `/api/admin/settings` | Administração |
 
-## Próximos passos sugeridos
-
-- Refresh token em cookie `httpOnly` e autenticação em dois fatores (TOTP).
-- Conciliação bancária por importação de OFX/CNAB.
-- Rotina de encerramento do exercício (transferir o resultado para lucros acumulados) e bloqueio de períodos fechados.
-- Exportação de relatórios em PDF/Excel.
-- Testes automatizados (Vitest + Supertest) e pipeline de CI.
